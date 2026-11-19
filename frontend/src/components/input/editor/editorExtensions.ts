@@ -25,6 +25,7 @@ import {BlockquoteWithCommentId} from './blockquoteWithCommentId'
 import {TaskLink, LINK_HTML_ATTRIBUTES} from './taskLink'
 import {createClipboardParser, fillRequiredContent, repairSliceContent} from './contentRepair'
 import {htmlHasFormatting} from './clipboardHtml'
+import {ClipboardListMarkers} from './clipboardText'
 
 import Commands from './commands'
 import suggestionSetup from './suggestion'
@@ -297,6 +298,7 @@ export function createEditorExtensions(deps: EditorExtensionDeps): Extensions {
 			link: false,
 			underline: false,
 		}),
+		ClipboardListMarkers,
 		ListKeymapWithJoin,
 		DeleteSelectionBeforeEnter,
 		BlockquoteWithCommentId,
